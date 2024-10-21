@@ -1,10 +1,6 @@
-# Python script to write a README file based on the Express.js project
-
-# Define the content for the README
-readme_content = """
 # Express.js CRUD Application
 
-This project demonstrates a simple CRUD application using Express.js, supervised by Prof. Amal Ourdou and prepared by Naji Ezzoubir.
+This project demonstrates a simple CRUD application using Express.js, supervised by Prof. Amal OURDOU and prepared by NAJI Ez zoubir.
 
 ## Features
 
@@ -29,19 +25,13 @@ This project demonstrates a simple CRUD application using Express.js, supervised
 
 ## Testing
 
-Use Postman or similar tools to test API endpoints. Ensure the server is running on `http://localhost:3000`.
+Use Postman to test API endpoints. Ensure the server is running on `http://localhost:3000`.
 
 ## Author
 
-Naji Ezzoubir
+NAJI Ez zoubir
 
 ## Acknowledgments
 
-Supervised by Prof. Ourdou Amal
-"""
+Supervised by Prof. OURDOU Amal
 
-# Write the content to README.md
-with open('README.md', 'w') as readme_file:
-    readme_file.write(readme_content)
-
-print("README.md has been created.")

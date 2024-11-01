@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Book Reading Tracker</title>
+</head>
+
+<body class="bg-gray-100 p-8">
+    <h1 class="text-2xl font-bold mb-4">Book Reading Tracker</h1>
+    <form id="bookForm" class="mb-6">
+        <input type="text" id="title" placeholder="Title" class="border p-2 mb-2 w-full" required>
+        <input type="text" id="author" placeholder="Author" class="border p-2 mb-2 w-full" required>
+        <input type="number" id="numberOfPages" placeholder="Number of Pages" class="border p-2 mb-2 w-full" required>
+        <input type="number" id="price" placeholder="Price" class="border p-2 mb-2 w-full" required>
+        <input type="number" id="pagesRead" placeholder="Pages Read" class="border p-2 mb-2 w-full" required>
+        <select id="status" class="border p-2 mb-2 w-full" required>
+            <option value="Read">Read</option>
+            <option value="Re-read">Re-read</option>
+            <option value="DNF">DNF</option>
+            <option value="Currently reading">Currently reading</option>
+            <option value="Returned Unread">Returned Unread</option>
+            <option value="Want to read">Want to read</option>
+        </select>
+        <select id="format" class="border p-2 mb-2 w-full" required>
+            <option value="Print">Print</option>
+            <option value="PDF">PDF</option>
+            <option value="Ebook">Ebook</option>
+            <option value="AudioBook">AudioBook</option>
+        </select>
+        <input type="text" id="suggestedBy" placeholder="Suggested By" class="border p-2 mb-2 w-full">
+        <button type="submit" class="bg-blue-500 text-white p-2">Add Book</button>
+    </form>
+    <div id="bookList"></div>
+    <script src="app.js"></script>
+</body>
+
+</html>

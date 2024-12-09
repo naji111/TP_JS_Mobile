@@ -1,0 +1,31 @@
+<div class="container">
+  <h2>Shows Manager</h2>
+  
+  <form [formGroup]="showForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <input type="text" formControlName="title" placeholder="Title" class="form-control">
+    </div>
+    
+    <div class="form-group">
+      <textarea formControlName="description" placeholder="Description" class="form-control"></textarea>
+    </div>
+    
+    <div class="form-group">
+      <input type="number" formControlName="episodes" placeholder="Number of Episodes" class="form-control">
+    </div>
+    
+    <button type="submit" [disabled]="!showForm.valid">
+      {{ editMode ? 'Update' : 'Add' }} Show
+    </button>
+  </form>
+
+  <div class="shows-list">
+    <div *ngFor="let show of shows" class="show-item">
+      <h3>{{ show.title }}</h3>
+      <p>{{ show.description }}</p>
+      <p>Episodes: {{ show.episodes }}</p>
+      <button (click)="editShow(show)">Edit</button>
+      <button (click)="deleteShow(show.id)">Delete</button>
+    </div>
+  </div>
+</div>
